@@ -138,16 +138,16 @@
 
 #define CONFIG_BOOTDELAY	1
 //#define CONFIG_BOOTARGS		"noinitrd root=/dev/nfs rw nfsroot=192.168.199.222:/work/nfs_root/rootfs_rtm_2440 ip=192.168.199.22:192.168.199.222:192.168.199.1:255.255.255.0 console=ttySAC0,115200 init=/linuxrc mem=64M"
-#define CONFIG_BOOTARGS	    "console=ttySAC0 root=/dev/nfs nfsroot=192.168.199.222:/work/nfs_root/rootfs_rtm_2440 ip=192.168.199.22:192.168.199.222:192.168.199.1:255.255.255.0:sbc2440.arm9.net:eth0:off"
+#define CONFIG_BOOTARGS	    "console=ttySAC0 root=/dev/nfs nfsroot=192.168.199.230:/root/mini2440/nfs_root/rootfs_rtm_2440 ip=192.168.199.22:192.168.199.230:192.168.199.1:255.255.255.0:sbc2440.arm9.net:eth0:off"
 #define CONFIG_ETHADDR	        08:08:11:18:12:27
 #define CONFIG_NETMASK          255.255.255.0
 #define CONFIG_IPADDR		192.168.199.22
-#define CONFIG_SERVERIP		192.168.199.222
+#define CONFIG_SERVERIP		192.168.199.230
 #define CONFIG_GATEWAYIP	192.168.199.1
 #define CONFIG_OVERWRITE_ETHADDR_ONCE
 
 /*#define CONFIG_BOOTFILE	"elinos-lart" */
-#define CONFIG_BOOTCOMMAND	"nfs 0x31000000 192.168.199.222:/work/kernel/linux-2.6.32.2/arch/arm/boot/uImage;bootm 0x31000000"
+#define CONFIG_BOOTCOMMAND	"nfs 0x31000000 192.168.199.230:/root/mini2440/mini2440_kernel/linux-2.6.32.2/arch/arm/boot/uImage;bootm 0x31000000"
 #define	CONFIG_EXTRA_ENV_SETTINGS					\
 	"tekkaman=bmp d 70000\0 "				\
 	"stdin=serial\0"					\
